@@ -1,0 +1,58 @@
+1 .
+l=[1,2,3,-412, 123, 369, 111]
+
+arraySum = 0
+for i in l:
+    arraySum += i
+    
+print("Sum of array: ", arraySum)
+
+2.l = [1,2,3,-412, 123, 369, 111]
+
+arrayMax = -9999999999999
+
+for i in l:
+    if i > arrayMax:
+        arrayMax = i
+
+print(arrayMax)
+
+3.
+l = [1,2,3,-412, 123, 369, 111]
+
+print("Rotated array:")
+print(l[::-1])
+
+4.def splitAdd(l, split):
+    '''
+    l = list
+    split = splitIndex
+    '''
+    out = []
+    for i in range(len(l)):
+        index = (i+len(l)+split)%len(l)
+        out.append(l[index])
+        
+    return out
+
+ l = [1,2,3,-412, 123, 369, 111]
+splitIndex = 2
+splitAdd(l, splitIndex)
+
+5. def monotonicCheck(array):
+    flag = True
+    
+    if array[0] >= array[len(array)-1]:
+        for i in range(len(array)-2):
+            if array[i] < array[i+1]:
+                flag = False
+    else:
+        for i in range(len(array)-2):
+            if array[i] > array[i+1]:
+                flag = False
+                
+    return flag
+
+    array = [1,2,3,56, 124, 369]
+
+    monotonicCheck(array)
